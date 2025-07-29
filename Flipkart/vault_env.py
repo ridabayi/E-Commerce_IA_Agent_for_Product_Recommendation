@@ -18,10 +18,3 @@ except Exception as e:
 for key, value in secret.items():
     if value:
         os.environ[key] = value
-
-"""
-from load_secrets import *  # charge et injecte automatiquement les clés dans os.environ
-# Exemple d’utilisation
-import os
-print("🔐 GROQ =", os.environ.get("GROQ_API_KEY"))
-"""
