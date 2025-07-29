@@ -15,6 +15,7 @@ Requires-Dist: python-dotenv
 Requires-Dist: pandas
 Requires-Dist: flask
 Requires-Dist: prometheus_client
+Requires-Dist: hvac
 Dynamic: author
 Dynamic: author-email
 Dynamic: license-file
