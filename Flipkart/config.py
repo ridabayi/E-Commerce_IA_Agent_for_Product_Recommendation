@@ -1,5 +1,5 @@
 import os
-from Flipkart import vault_env
+from Flipkart import vault_api_keys
 
 
 class Config:
