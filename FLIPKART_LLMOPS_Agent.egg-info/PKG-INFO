@@ -5,10 +5,11 @@ Author: ridabayi
 Author-email: bayi.rida@gmail.com
 License-File: LICENSE
 Requires-Dist: langchain
-Requires-Dist: langchain-astradb
-Requires-Dist: langchain-huggingface
-Requires-Dist: langchain-groq
+Requires-Dist: langchain-core
 Requires-Dist: langchain-community
+Requires-Dist: langchain-groq
+Requires-Dist: langchain-huggingface
+Requires-Dist: langchain-astradb
 Requires-Dist: datasets
 Requires-Dist: pypdf
 Requires-Dist: python-dotenv

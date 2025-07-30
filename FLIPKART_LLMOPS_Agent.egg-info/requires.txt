@@ -1,8 +1,9 @@
 langchain
-langchain-astradb
-langchain-huggingface
-langchain-groq
+langchain-core
 langchain-community
+langchain-groq
+langchain-huggingface
+langchain-astradb
 datasets
 pypdf
 python-dotenv
