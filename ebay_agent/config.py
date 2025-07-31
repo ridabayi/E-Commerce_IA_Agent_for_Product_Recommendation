@@ -1,5 +1,6 @@
 import os
-from ebay_agent import vault_api_keys
+from dotenv import load_dotenv
+load_dotenv()
 
 
 class Config:

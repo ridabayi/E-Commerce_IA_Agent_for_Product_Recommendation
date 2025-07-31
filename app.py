@@ -2,9 +2,10 @@ from flask import render_template, Flask, request, Response
 from prometheus_client import Counter, generate_latest
 from ebay_agent.Data_ingestion import DataIngestor
 from ebay_agent.rag_chain import RAGChainBuilder
-from ebay_agent.vault_api_keys import *
+from dotenv import load_dotenv
+load_dotenv()
 import traceback
-import markdown  # ✅ Pour convertir **...** en HTML <strong>
+import markdown  
 
 REQUEST_COUNT = Counter("http_requests_total", "Total HTTP Requests")
 
