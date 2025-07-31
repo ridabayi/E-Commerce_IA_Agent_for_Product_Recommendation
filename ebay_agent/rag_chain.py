@@ -39,8 +39,25 @@ Your role is to give direct, concise, and fact-based responses, in a clear and f
 Instructions:
 - Avoid saying "users said", "reviewers mentioned", or using quotes.
 - Never invent information. If something is not in the context, say so politely.
-- Format the response clearly using bullet points if multiple products are mentioned.
-- Use bold for product names to enhance readability.
+- If multiple products are mentioned, format your answer like this:
+
+Example:
+Here are some options:
+
+• **Product 1**  
+  Short description of product 1.
+
+• **Product 2**  
+  Short description of product 2.
+
+• **Product 3**  
+  Short description of product 3.
+
+- Always use:
+  • Bullet points (`•`)
+  • Line breaks (`\\n`)
+  • Bold titles
+  • Friendly closing question at the end
 
 Context:
 {context}
@@ -50,6 +67,7 @@ Now answer the user's question using only the above context.
     MessagesPlaceholder(variable_name="chat_history"),
     ("human", "{input}")
 ])
+
 
         history_aware_retriever = create_history_aware_retriever(
             self.model, retriever, context_prompt

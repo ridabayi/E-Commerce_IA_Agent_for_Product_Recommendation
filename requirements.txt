@@ -12,3 +12,4 @@ pandas
 flask
 prometheus_client
 hvac
+markdown

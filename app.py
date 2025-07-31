@@ -4,9 +4,10 @@ from ebay_agent.Data_ingestion import DataIngestor
 from ebay_agent.rag_chain import RAGChainBuilder
 from ebay_agent.vault_api_keys import *
 import traceback
-
+import markdown  # ✅ Pour convertir **...** en HTML <strong>
 
 REQUEST_COUNT = Counter("http_requests_total", "Total HTTP Requests")
+
 def create_app():
     app = Flask(__name__)
 
@@ -26,12 +27,16 @@ def create_app():
             session_id = request.form.get("session_id", "default-session")
             print(f"[User Input] {user_input} | Session: {session_id}")
 
-            response = rag_chain.invoke(
+            # 🔁 Appel de la chaîne RAG
+            response_raw = rag_chain.invoke(
                 {"input": user_input},
                 config={"configurable": {"session_id": session_id}}
             )["answer"]
 
-            return str(response)
+            # ✅ Convertir la réponse Markdown → HTML (gras, sauts de ligne, bullets…)
+            response_html = markdown.markdown(response_raw, output_format="html5")
+
+            return response_html
 
         except Exception as e:
             print("❌ Erreur dans /get:", e)

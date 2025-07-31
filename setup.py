@@ -4,7 +4,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(
-    name='FLIPKART LLMOPS-Agent',
+    name='Ebay LLMOPS-Agent',
     version='0.1.0',
     author='ridabayi',
     author_email='bayi.rida@gmail.com',
