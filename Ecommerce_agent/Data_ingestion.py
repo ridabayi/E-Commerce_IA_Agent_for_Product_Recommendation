@@ -1,7 +1,7 @@
 from langchain_astradb import AstraDBVectorStore
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
-from ebay_agent.Data_converter import DataConverter
-from ebay_agent.config import Config
+from Ecommerce_agent.Data_converter import DataConverter
+from Ecommerce_agent.config import Config
 
 
 class DataIngestor:

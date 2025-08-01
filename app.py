@@ -1,7 +1,7 @@
 from flask import render_template, Flask, request, Response
 from prometheus_client import Counter, generate_latest
-from ebay_agent.Data_ingestion import DataIngestor
-from ebay_agent.rag_chain import RAGChainBuilder
+from Ecommerce_agent.Data_ingestion import DataIngestor
+from Ecommerce_agent.rag_chain import RAGChainBuilder
 from dotenv import load_dotenv
 load_dotenv()
 import traceback
