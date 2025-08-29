@@ -27,11 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest pytest-cov
+          pip install -e .
 
       - name: Run tests with coverage (produit coverage.xml)
         run: |
-          pytest --maxfail=1 --disable-warnings -q \
-                 --cov=. --cov-report=xml:coverage.xml
+          pytest --maxfail=1 --disable-warnings -q --cov=. --cov-report=xml:coverage.xml
 
       - name: Set up Java (needed by Sonar)
         uses: actions/setup-java@v4

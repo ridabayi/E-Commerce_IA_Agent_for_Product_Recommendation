@@ -21,6 +21,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install -e .
           pip install black ruff mypy types-Markdown pre-commit
 
       - name: Run pre-commit (black/ruff/mypy)

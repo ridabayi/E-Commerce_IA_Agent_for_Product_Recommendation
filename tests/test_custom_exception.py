@@ -1,4 +1,9 @@
+import os
+import sys
+
 from utils.custom_exception import CustomException
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 
 def test_custom_exception_str_contains_message():
