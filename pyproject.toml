@@ -1,0 +1,51 @@
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+exclude = '''
+/(
+  venv|
+  \.venv|
+  __pycache__|
+  build|
+  dist|
+  .*egg-info
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["venv", ".venv", "build", "dist", "**/__pycache__"]
+fix = true
+
+# ✅ nouvelle syntaxe (évite l’avertissement)
+[tool.ruff.lint]
+extend-select = [
+  "E", "F", "I",     # pycodestyle/pyflakes + isort
+  "UP",              # pyupgrade
+  "B",               # bugbear
+  "C4"               # comprehensions
+]
+
+[tool.ruff.format]
+# On garde Black comme formateur principal (Ruff peut formatter aussi, mais restons simples)
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = false   # on gère finement avec overrides
+strict = false
+warn_unused_ignores = true
+warn_redundant_casts = true
+exclude = '(venv|\.venv|build|dist|.*egg-info|__pycache__)'
+plugins = []
+
+# ✅ ignore finement le module "markdown" pour éviter l'erreur de stubs
+[[tool.mypy.overrides]]
+module = ["markdown"]
+ignore_missing_imports = true
+
+# Exemple existant conservé
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false

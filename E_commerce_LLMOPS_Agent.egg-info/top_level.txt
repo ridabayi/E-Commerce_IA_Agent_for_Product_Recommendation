@@ -1,2 +1,0 @@
-Ecommerce_agent
-utils

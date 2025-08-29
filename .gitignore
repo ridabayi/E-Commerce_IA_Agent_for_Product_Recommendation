@@ -1,3 +1,13 @@
-.env
 venv/
+.venv/
+.env
 E_commerce_LLMOPS_Agent.egg-info/
+__pycache__/
+*.pyc
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.vscode/
+build/
+dist/

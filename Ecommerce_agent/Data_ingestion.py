@@ -1,7 +1,8 @@
 from langchain_astradb import AstraDBVectorStore
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
-from Ecommerce_agent.Data_converter import DataConverter
+
 from Ecommerce_agent.config import Config
+from Ecommerce_agent.Data_converter import DataConverter
 
 
 class DataIngestor:
@@ -15,7 +16,7 @@ class DataIngestor:
             collection_name="amazon_product_reviews",
             api_endpoint=Config.ASTRADB_API_ENDPOINT,
             token=Config.ASTRADB_APPLICATION_TOKEN,
-            namespace=Config.ASTRADB_KEYSPACE
+            namespace=Config.ASTRADB_KEYSPACE,
         )
 
     def ingest(self, load_existing=True):
