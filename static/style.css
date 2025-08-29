@@ -81,11 +81,16 @@ body {
 }
 
 .bubble {
-  max-width: 75%;
-  padding: 10px 16px;
-  border-radius: 18px;
-  font-size: 15px;
-  line-height: 1.4;
+  max-width: 95%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #e9efff;
+  color: #0b1324;
+  line-height: 1.35;
+  box-shadow: 0 4px 14px rgba(2,6,23,.06);
+
+  white-space: normal;       /* 👈 empêche retour automatique */
+  overflow-wrap: keep-all;     /* 👈 garde les mots collés */
 }
 
 .user .bubble {
@@ -150,4 +155,43 @@ body {
 
 .bubble {
   white-space: pre-wrap;
+}
+
+:root {
+  --brand:#0d6efd;
+  --bg:#f4f6fb;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --bubble-user:#dff6e3;
+  --bubble-bot:#eef3ff;
+  --border:#e5e9f5;
+}
+
+/* === Mode sombre === */
+.dark {
+  --bg:#0b1220;
+  --card:#0f172a;
+  --text:#e5edff;
+  --muted:#9fb0d7;
+  --bubble-user:#14322a;   /* bulles user foncées */
+  --bubble-bot:#1e2b44;    /* bulles bot foncées */
+  --border:#1f2a44;
+}
+
+/* adapter bulles pour contraster avec texte clair */
+.dark .message.user .bubble {
+  background: var(--bubble-user);
+  color: #c5f7d6;          /* vert clair lisible */
+}
+.dark .message.bot .bubble {
+  background: var(--bubble-bot);
+  color: #e5edff;          /* texte clair */
+}
+
+/* champ texte clair sur fond sombre */
+.dark #text {
+  background:#0b1220;
+  color:var(--text);
+  border-color:#1e2b44;
 }
