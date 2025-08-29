@@ -1,18 +1,13 @@
 import logging
 import os
-from datetime import datetime
-
-LOGS_DIR = "logs"
-os.makedirs(LOGS_DIR, exist_ok=True)
-
-LOG_FILE = os.path.join(LOGS_DIR, f"log_{datetime.now().strftime('%Y-%m-%d')}.log")
-
-logging.basicConfig(
-    filename=LOG_FILE, format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO
-)
 
 
-def get_logger(name):
-    logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+def get_logger(name: str | None = None) -> logging.Logger:
+    level = os.getenv("LOG_LEVEL", "INFO").upper()
+    logger = logging.getLogger(name if name else "app")
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s - %(message)s"))
+        logger.addHandler(handler)
+    logger.setLevel(level)
     return logger

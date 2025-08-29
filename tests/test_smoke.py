@@ -2,22 +2,15 @@ import importlib
 import os
 
 
-def _get_app():
+def _app():
     os.environ["APP_TESTING"] = "1"
-    mod = importlib.import_module("app")
-    if hasattr(mod, "create_app"):
-        return mod.create_app()
-    if hasattr(mod, "app"):
-        return mod.app
-    raise RuntimeError("No Flask app found.")
+    return importlib.import_module("app").create_app()
 
 
 def test_app_imports():
-    assert _get_app() is not None
+    assert _app() is not None
 
 
-def test_basic_route_status():
-    app = _get_app()
-    app.testing = True
-    client = app.test_client()
+def test_health_ok():
+    client = _app().test_client()
     assert client.get("/health").status_code == 200

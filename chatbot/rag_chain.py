@@ -9,7 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_groq import ChatGroq
 
-from Ecommerce_agent.config import Config
+from chatbot.config import Config
 
 
 class RAGChainBuilder:

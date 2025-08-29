@@ -1,9 +1,11 @@
-venv/
-.venv/
 .env
-E_commerce_LLMOPS_Agent.egg-info/
+*.pem
+*.key
 __pycache__/
-*.pyc
+.venv/
+venv/
+E_commerce_LLMOPS_Agent.egg-info/
+*.pyc/
 *.egg-info/
 .ruff_cache/
 .mypy_cache/

@@ -1,7 +1,8 @@
+from pathlib import Path
+
 from setuptools import find_packages, setup
 
-with open("requirements.txt") as f:
-    requirements = f.read().splitlines()
+requirements = Path("requirements.txt").read_text().splitlines()
 
 setup(
     name="E-commerce LLMOPS-Agent",
