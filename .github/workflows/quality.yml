@@ -1,25 +1,27 @@
-name: Quality
+name: Quality / lint-typecheck
 
 on:
   push:
+    branches: [ "main" ]
   pull_request:
 
 jobs:
-  lint-typecheck:
+  quality:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Install dev deps
+          python-version: "3.11"
+
+      - name: Install tools & deps
         run: |
-          python -m pip install -U pip
-          pip install -r requirements.txt || true
-          pip install ruff black mypy
-      - name: Ruff (lint)
-        run: ruff check . --output-format=github
-      - name: Black (check)
-        run: black --check .
-      - name: MyPy
-        run: mypy .
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install black ruff mypy types-Markdown pre-commit
+
+      - name: Run pre-commit (black/ruff/mypy)
+        run: pre-commit run --all-files
