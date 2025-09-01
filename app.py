@@ -184,6 +184,7 @@ def create_app() -> Flask:
 
 if __name__ == "__main__":  # pragma: no cover
     app = create_app()
-    host = os.getenv("FLASK_HOST", "127.0.0.1")  # use 0.0.0.0 only via env in Docker
+    host = os.getenv("FLASK_HOST", "127.0.0.1")
     port = int(os.getenv("PORT", "5000"))
+    logger.info("Starting server on http://%s:%s", host, port)
     app.run(host=host, port=port, debug=True)
