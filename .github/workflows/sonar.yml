@@ -2,7 +2,7 @@ name: SonarCloud
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
 
 jobs:
@@ -13,7 +13,8 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -22,20 +23,39 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install test deps
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt pytest pytest-cov
-          pip install -e .
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+          pip install -e .  # install your package (so imports work)
 
-      - name: Run tests with coverage (produit coverage.xml)
+      - name: Run tests with coverage (produce coverage.xml)
+        env:
+          APP_TESTING: "1"     # disable RAG and use stable fallbacks
+          PYTHONPATH: "."      # just in case
         run: |
           pytest --cov --cov-report=xml:coverage.xml --cov-fail-under=50
 
-      - name: Set up Java (needed by Sonar)
+      - name: Upload coverage artifact (debug-friendly)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml
+
+      - name: Set up Java (required by Sonar)
         uses: actions/setup-java@v4
         with:
-          distribution: "temurin"
+          distribution: temurin
           java-version: "17"
 
       - name: SonarCloud Scan
@@ -43,3 +63,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        

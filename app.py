@@ -145,6 +145,24 @@ def create_app() -> Flask:
 
         return Response(reply, mimetype="text/plain")
 
+    @app.after_request
+    def set_security_headers(resp: Response) -> Response:
+        # Minimal, safe defaults (tune CSP to match your CDNs used by index.html)
+        resp.headers["X-Content-Type-Options"] = "nosniff"
+        resp.headers["X-Frame-Options"] = "DENY"
+        resp.headers["Referrer-Policy"] = "no-referrer"
+        resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
+        resp.headers["Content-Security-Policy"] = (
+            "default-src 'self'; "
+            "img-src 'self' data: https://cdn-icons-png.flaticon.com; "
+            "style-src 'self' 'unsafe-inline' "
+            "https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; "
+            "font-src 'self' https://fonts.gstatic.com; "
+            "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com"
+        )
+
+        return resp
+
     @app.get("/metrics")
     def metrics() -> Response:
         return Response(generate_latest(), mimetype="text/plain")
@@ -154,7 +172,6 @@ def create_app() -> Flask:
 
 if __name__ == "__main__":  # pragma: no cover
     app = create_app()
-    # Par défaut, bind local (évite l’alerte Ruff S104). Pour Docker: FLASK_HOST=0.0.0.0
-    host = os.getenv("FLASK_HOST", "127.0.0.1")
+    host = os.getenv("FLASK_HOST", "127.0.0.1")  # use 0.0.0.0 only via env in Docker
     port = int(os.getenv("PORT", "5000"))
     app.run(host=host, port=port, debug=True)
