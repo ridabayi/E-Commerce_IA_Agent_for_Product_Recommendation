@@ -1,14 +1,21 @@
 from __future__ import annotations
 
 import logging
-from datetime import UTC, datetime
+from datetime import datetime, tzinfo
 from pathlib import Path
+
+# Py 3.11+ fournit datetime.UTC ; sinon on retombe sur timezone.utc
+try:
+    from datetime import UTC  # py311+
+
+    UTC_TZ: tzinfo = UTC
+except ImportError:
+    UTC_TZ = UTC
 
 LOGS_DIR = Path("logs")
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
 
-# OK pour Python 3.10+ : timezone.utc
-LOG_FILE = LOGS_DIR / f"log_{datetime.now(UTC).strftime('%Y-%m-%d')}.log"
+LOG_FILE = LOGS_DIR / f"log_{datetime.now(UTC_TZ).strftime('%Y-%m-%d')}.log"
 
 # Handlers
 file_handler = logging.FileHandler(LOG_FILE, encoding="utf-8")
