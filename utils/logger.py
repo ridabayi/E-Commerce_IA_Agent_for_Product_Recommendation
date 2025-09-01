@@ -7,7 +7,7 @@ from pathlib import Path
 LOGS_DIR = Path("logs")
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
 
-# Compatible with Python 3.10+ (timezone.utc instead of UTC)
+# OK pour Python 3.10+ : timezone.utc
 LOG_FILE = LOGS_DIR / f"log_{datetime.now(UTC).strftime('%Y-%m-%d')}.log"
 
 # Handlers
