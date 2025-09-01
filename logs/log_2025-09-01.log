@@ -394,3 +394,474 @@ NoneType: None
 2025-09-01 13:43:00,326 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
 2025-09-01 13:43:00,689 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2025-09-01 13:43:00,716 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 13:43:00] "POST /get HTTP/1.1" 200 -
+2025-09-01 14:28:04,904 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 14:28:09,277 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 14:28:11,934 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 14:28:14,521 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 14:28:14,523 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 14:28:16,213 - ERROR - __main__ - RAG init error
+NoneType: None
+2025-09-01 14:28:16,216 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 14:28:16,250 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 14:28:16,251 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-01 14:28:16,253 - INFO - werkzeug -  * Restarting with stat
+2025-09-01 14:28:19,486 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 14:28:20,012 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 14:28:22,526 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 14:28:24,920 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 14:28:24,922 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 14:28:26,437 - ERROR - __main__ - RAG init error
+NoneType: None
+2025-09-01 14:28:26,439 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 14:28:26,453 - WARNING - werkzeug -  * Debugger is active!
+2025-09-01 14:28:26,461 - INFO - werkzeug -  * Debugger PIN: 752-397-832
+2025-09-01 14:28:26,499 - INFO - __main__ - ➡️ GET /
+2025-09-01 14:28:26,508 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:28:26] "GET / HTTP/1.1" 200 -
+2025-09-01 14:28:26,561 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 14:28:26,656 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:28:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 14:28:39,770 - INFO - __main__ - ➡️ POST /get
+2025-09-01 14:28:39,990 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 14:28:40,440 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 14:28:40,441 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 14:28:40,781 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 14:28:40,834 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:28:40] "POST /get HTTP/1.1" 200 -
+2025-09-01 14:29:03,094 - INFO - __main__ - ➡️ POST /get
+2025-09-01 14:29:03,505 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 14:29:03,732 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 14:29:04,173 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 14:29:04,174 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 14:29:04,637 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 14:29:04,641 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:29:04] "POST /get HTTP/1.1" 200 -
+2025-09-01 14:49:53,736 - INFO - __main__ - ➡️ GET /
+2025-09-01 14:49:53,825 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:49:53] "GET / HTTP/1.1" 200 -
+2025-09-01 14:49:53,910 - INFO - __main__ - ➡️ GET /static/rida.jpg
+2025-09-01 14:49:53,914 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 14:49:53,923 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:49:53] "[33mGET /static/rida.jpg HTTP/1.1[0m" 404 -
+2025-09-01 14:49:53,934 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 14:49:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:12:37,001 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:12:37,112 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:37] "GET / HTTP/1.1" 200 -
+2025-09-01 15:12:37,347 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:12:37,355 - INFO - __main__ - ➡️ GET /static/rida.jpg
+2025-09-01 15:12:37,373 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:37] "[33mGET /static/rida.jpg HTTP/1.1[0m" 404 -
+2025-09-01 15:12:37,373 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:12:41,091 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:12:41,094 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:41] "GET / HTTP/1.1" 200 -
+2025-09-01 15:12:41,126 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:12:41,131 - INFO - __main__ - ➡️ GET /static/rida.jpg
+2025-09-01 15:12:41,133 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:12:41,135 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:41] "[33mGET /static/rida.jpg HTTP/1.1[0m" 404 -
+2025-09-01 15:12:53,501 - INFO - __main__ - ➡️ POST /get
+2025-09-01 15:12:57,694 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:12:58,310 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 15:12:58,313 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:12:58,655 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:12:58,686 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:12:58] "POST /get HTTP/1.1" 200 -
+2025-09-01 15:13:17,213 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:13:17,221 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:13:17] "GET / HTTP/1.1" 200 -
+2025-09-01 15:13:17,249 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:13:17,250 - INFO - __main__ - ➡️ GET /static/rida.jpg
+2025-09-01 15:13:17,252 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:13:17] "[33mGET /static/rida.jpg HTTP/1.1[0m" 404 -
+2025-09-01 15:13:17,253 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:13:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:13:36,036 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:13:36,044 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:13:36] "GET / HTTP/1.1" 200 -
+2025-09-01 15:13:36,066 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:13:36,069 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:13:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:16:24,031 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:16:24,040 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:16:24] "GET / HTTP/1.1" 200 -
+2025-09-01 15:16:24,077 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:16:24,079 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:16:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:16:50,316 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:16:50,328 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:16:50] "GET / HTTP/1.1" 200 -
+2025-09-01 15:16:50,366 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:16:50,368 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:16:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:16:53,818 - INFO - __main__ - ➡️ POST /get
+2025-09-01 15:16:55,369 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:16:59,321 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:16:59,898 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 15:16:59,900 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:17:00,106 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:17:00,116 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:17:00] "POST /get HTTP/1.1" 200 -
+2025-09-01 15:19:20,224 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:19:20,231 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:19:20] "GET / HTTP/1.1" 200 -
+2025-09-01 15:19:20,259 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:19:20,261 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:19:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:19:22,108 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:19:22,109 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:19:22] "GET / HTTP/1.1" 200 -
+2025-09-01 15:19:22,139 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:19:22,141 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:19:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:19:22,863 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:19:22,864 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:19:22] "GET / HTTP/1.1" 200 -
+2025-09-01 15:19:22,883 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:19:22,883 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:19:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:20:05,225 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:20:05,232 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:05] "GET / HTTP/1.1" 200 -
+2025-09-01 15:20:05,256 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:20:05,257 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:20:05,975 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:20:05,977 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:05] "GET / HTTP/1.1" 200 -
+2025-09-01 15:20:06,001 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:20:06,004 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:20:06,822 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:20:06,824 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:06] "GET / HTTP/1.1" 200 -
+2025-09-01 15:20:06,848 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:20:06,851 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:20:42,409 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:20:42,417 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:42] "GET / HTTP/1.1" 200 -
+2025-09-01 15:20:42,444 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:20:42,446 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:20:43,153 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:20:43,154 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:43] "GET / HTTP/1.1" 200 -
+2025-09-01 15:20:43,172 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:20:43,175 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:20:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:21:01,584 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 15:21:05,854 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 15:21:08,298 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 15:21:10,862 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 15:21:10,864 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 15:21:12,472 - ERROR - __main__ - RAG init error
+NoneType: None
+2025-09-01 15:21:12,475 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 15:21:12,503 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 15:21:12,504 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-01 15:21:12,505 - INFO - werkzeug -  * Restarting with stat
+2025-09-01 15:21:15,599 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 15:21:16,211 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 15:21:18,743 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 15:21:21,067 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 15:21:21,068 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 15:21:22,848 - ERROR - __main__ - RAG init error
+NoneType: None
+2025-09-01 15:21:22,850 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 15:21:22,861 - WARNING - werkzeug -  * Debugger is active!
+2025-09-01 15:21:22,867 - INFO - werkzeug -  * Debugger PIN: 752-397-832
+2025-09-01 15:21:22,889 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:21:22,896 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:21:22] "GET / HTTP/1.1" 200 -
+2025-09-01 15:21:22,938 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:21:23,059 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:21:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:22:15,132 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:22:15,134 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:22:15] "GET / HTTP/1.1" 200 -
+2025-09-01 15:22:15,161 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:22:15,163 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:22:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:27:38,060 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:27:38,067 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:27:38] "GET / HTTP/1.1" 200 -
+2025-09-01 15:27:38,105 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 15:27:38,106 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:27:38,108 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:27:38] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 15:27:38,110 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:27:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:27:48,650 - INFO - __main__ - ➡️ POST /get
+2025-09-01 15:27:52,456 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:27:53,119 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 15:27:53,120 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:27:53,799 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:27:53,837 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:27:53] "POST /get HTTP/1.1" 200 -
+2025-09-01 15:28:03,019 - INFO - __main__ - ➡️ POST /get
+2025-09-01 15:28:03,515 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:28:03,706 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:28:04,122 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 15:28:04,124 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:28:04,445 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:28:04,452 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:28:04] "POST /get HTTP/1.1" 200 -
+2025-09-01 15:28:16,506 - INFO - __main__ - ➡️ POST /get
+2025-09-01 15:28:17,016 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:28:17,307 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:28:17,750 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 15:28:17,752 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:28:18,202 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:28:18,206 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:28:18] "POST /get HTTP/1.1" 200 -
+2025-09-01 15:48:44,495 - INFO - __main__ - ➡️ GET /
+2025-09-01 15:48:44,589 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:48:44] "GET / HTTP/1.1" 200 -
+2025-09-01 15:48:44,735 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 15:48:44,739 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 15:48:44,755 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:48:44] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 15:48:44,756 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:48:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 15:49:11,453 - INFO - __main__ - ➡️ POST /get
+2025-09-01 15:49:16,011 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:49:16,690 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 15:49:16,698 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 15:49:17,028 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 15:49:17,053 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 15:49:17] "POST /get HTTP/1.1" 200 -
+2025-09-01 16:01:32,720 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:01:32,834 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:01:32] "GET / HTTP/1.1" 200 -
+2025-09-01 16:01:32,886 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:01:32,889 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:01:32,896 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:01:32] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:01:32,909 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:01:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:07:07,201 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:07:07,273 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:07:07] "GET / HTTP/1.1" 200 -
+2025-09-01 16:07:07,368 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:07:07,377 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:07:07] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:09:48,171 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:09:48,181 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:09:48] "GET / HTTP/1.1" 200 -
+2025-09-01 16:09:48,210 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:09:48,212 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:09:48] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:10:50,695 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:10:50,739 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:10:50] "GET / HTTP/1.1" 200 -
+2025-09-01 16:10:50,794 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:10:50,813 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:10:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:11:17,810 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:11:17,822 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:11:17] "GET / HTTP/1.1" 200 -
+2025-09-01 16:11:17,876 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:11:17,879 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:11:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:11:28,987 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:11:28,997 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:11:28] "GET / HTTP/1.1" 200 -
+2025-09-01 16:11:29,025 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:11:29,028 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:11:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:12:52,923 - INFO - __main__ - ➡️ POST /get
+2025-09-01 16:12:56,988 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:12:57,696 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 16:12:57,700 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:12:58,070 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:12:58,110 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:12:58] "POST /get HTTP/1.1" 200 -
+2025-09-01 16:16:56,902 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:16:56,994 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:16:56] "GET / HTTP/1.1" 200 -
+2025-09-01 16:16:57,041 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:16:57,056 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:16:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:17:00,245 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:17:00,246 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:17:00] "GET / HTTP/1.1" 200 -
+2025-09-01 16:17:00,278 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:17:00,280 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:17:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:36:09,366 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:36:09,604 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:36:09] "GET / HTTP/1.1" 200 -
+2025-09-01 16:36:09,777 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:36:09,791 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:36:09,813 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:36:09] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 16:36:09,837 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:36:09] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:36:27,631 - INFO - __main__ - ➡️ POST /get
+2025-09-01 16:36:28,338 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:36:28,725 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:36:29,357 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 16:36:29,359 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:36:29,599 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:36:29,610 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:36:29] "POST /get HTTP/1.1" 200 -
+2025-09-01 16:41:56,347 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:41:56,428 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:41:56] "GET / HTTP/1.1" 200 -
+2025-09-01 16:41:56,493 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:41:56,495 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:41:56,506 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:41:56] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:41:56,513 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:41:56] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 16:42:04,742 - INFO - __main__ - ➡️ POST /get
+2025-09-01 16:42:05,346 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:42:05,705 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:42:06,333 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 16:42:06,336 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:42:06,594 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:42:06,600 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:42:06] "POST /get HTTP/1.1" 200 -
+2025-09-01 16:42:08,706 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:42:08,707 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:42:08] "GET / HTTP/1.1" 200 -
+2025-09-01 16:42:08,746 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:42:08,748 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:42:08,749 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:42:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 16:42:08,751 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:42:08] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:52:50,803 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 16:52:54,847 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 16:52:57,327 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 16:52:59,864 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 16:52:59,865 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 16:53:01,520 - ERROR - __main__ - RAG init error
+NoneType: None
+2025-09-01 16:53:01,523 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 16:53:01,568 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 16:53:01,568 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-01 16:53:01,571 - INFO - werkzeug -  * Restarting with stat
+2025-09-01 16:53:04,231 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 16:53:04,843 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 16:53:07,536 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 16:53:09,946 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 16:53:09,948 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 16:53:11,481 - ERROR - __main__ - RAG init error
+NoneType: None
+2025-09-01 16:53:11,484 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 16:53:11,496 - WARNING - werkzeug -  * Debugger is active!
+2025-09-01 16:53:11,501 - INFO - werkzeug -  * Debugger PIN: 752-397-832
+2025-09-01 16:53:11,534 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:53:11,543 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:53:11] "GET / HTTP/1.1" 200 -
+2025-09-01 16:53:11,578 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:53:11,583 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:53:11,585 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:53:11] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:53:11,721 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:53:11] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 16:54:24,030 - INFO - __main__ - ➡️ POST /get
+2025-09-01 16:54:27,771 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:54:28,411 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 16:54:28,412 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:54:29,658 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:54:29,700 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:54:29] "POST /get HTTP/1.1" 200 -
+2025-09-01 16:54:37,095 - INFO - __main__ - ➡️ POST /get
+2025-09-01 16:54:37,319 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:54:37,743 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 16:54:37,744 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 16:54:38,478 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:54:38,483 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:54:38] "POST /get HTTP/1.1" 200 -
+2025-09-01 16:57:59,637 - INFO - __main__ - ➡️ GET /
+2025-09-01 16:57:59,640 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:57:59] "GET / HTTP/1.1" 200 -
+2025-09-01 16:57:59,675 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 16:57:59,677 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 16:57:59,679 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:57:59] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 16:57:59,681 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 16:57:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:01:32,786 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:01:32,916 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:01:32] "GET / HTTP/1.1" 200 -
+2025-09-01 17:01:32,967 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:01:32,967 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 17:01:32,969 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:01:32] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 17:01:32,970 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:01:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:03:37,206 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:03:37,208 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:03:37] "GET / HTTP/1.1" 200 -
+2025-09-01 17:03:37,237 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:03:37,239 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 17:03:37,241 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:03:37] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 17:03:37,244 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:03:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:05:50,348 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:05:50,382 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:05:50] "GET / HTTP/1.1" 200 -
+2025-09-01 17:05:50,413 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:05:50,419 - INFO - __main__ - ➡️ GET /static/avatar.jpg
+2025-09-01 17:05:50,421 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:05:50] "[33mGET /static/avatar.jpg HTTP/1.1[0m" 404 -
+2025-09-01 17:05:50,423 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:05:50] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:05:56,777 - INFO - __main__ - ➡️ POST /get
+2025-09-01 17:06:00,777 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 17:06:01,466 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 17:06:01,469 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 17:06:01,810 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 17:06:01,841 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:06:01] "POST /get HTTP/1.1" 200 -
+2025-09-01 17:06:13,241 - INFO - __main__ - ➡️ POST /get
+2025-09-01 17:06:13,493 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 17:06:13,699 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 17:06:14,158 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 17:06:14,159 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 17:06:14,432 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 17:06:14,437 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:06:14] "POST /get HTTP/1.1" 200 -
+2025-09-01 17:10:02,097 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:10:02,178 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:10:02] "GET / HTTP/1.1" 200 -
+2025-09-01 17:10:02,230 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:10:02,235 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:10:02,239 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:10:02] "[33mGET /static/RidaBayi.jpg HTTP/1.1[0m" 404 -
+2025-09-01 17:10:02,253 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:10:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:12:45,773 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:12:45,786 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:12:45] "GET / HTTP/1.1" 200 -
+2025-09-01 17:12:45,818 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:12:45,820 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:12:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:12:46,647 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:12:46,648 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:12:46] "GET / HTTP/1.1" 200 -
+2025-09-01 17:12:46,671 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:12:46,674 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:12:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:15:24,700 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:15:24,754 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:15:24] "GET / HTTP/1.1" 200 -
+2025-09-01 17:15:24,822 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:15:24,830 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:15:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:15:26,989 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:15:26,991 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:15:26] "GET / HTTP/1.1" 200 -
+2025-09-01 17:15:27,018 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:15:27,020 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:15:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:18:34,653 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:18:34,732 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:18:34] "GET / HTTP/1.1" 200 -
+2025-09-01 17:18:34,875 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:18:34,890 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:18:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:20:58,353 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:20:58,454 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:20:58] "GET / HTTP/1.1" 200 -
+2025-09-01 17:20:58,636 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:20:58,662 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:20:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:20:58,671 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:20:58,685 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:20:58] "[33mGET /static/RidaBayi.jpg HTTP/1.1[0m" 404 -
+2025-09-01 17:21:15,493 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:21:15,547 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:21:15] "GET / HTTP/1.1" 200 -
+2025-09-01 17:21:15,585 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:21:15,593 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:21:15,596 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:21:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:21:15,599 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:21:15] "GET /static/RidaBayi.png HTTP/1.1" 200 -
+2025-09-01 17:22:02,193 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:22:02,212 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:02] "GET / HTTP/1.1" 200 -
+2025-09-01 17:22:02,264 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:22:02,265 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:22:02,270 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:22:02,271 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:02] "[36mGET /static/RidaBayi.png HTTP/1.1[0m" 304 -
+2025-09-01 17:22:16,609 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:22:16,620 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:16] "GET / HTTP/1.1" 200 -
+2025-09-01 17:22:16,656 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:22:16,659 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:22:16,663 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:22:16,664 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:16] "[36mGET /static/RidaBayi.png HTTP/1.1[0m" 304 -
+2025-09-01 17:22:24,096 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:22:24,111 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:24] "GET / HTTP/1.1" 200 -
+2025-09-01 17:22:24,163 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:22:24,165 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:22:24,166 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:22:24,168 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:24] "[36mGET /static/RidaBayi.png HTTP/1.1[0m" 304 -
+2025-09-01 17:22:48,619 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:22:48,637 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:48] "GET / HTTP/1.1" 200 -
+2025-09-01 17:22:48,693 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:22:48,696 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:22:48,707 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:22:48,711 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:22:48] "[36mGET /static/RidaBayi.png HTTP/1.1[0m" 304 -
+2025-09-01 17:23:08,596 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:23:08,616 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:23:08] "GET / HTTP/1.1" 200 -
+2025-09-01 17:23:08,659 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:23:08,662 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:23:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:23:08,676 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:23:08,679 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:23:08] "[36mGET /static/RidaBayi.png HTTP/1.1[0m" 304 -
+2025-09-01 17:27:51,955 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:27:51,965 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:27:51] "GET / HTTP/1.1" 200 -
+2025-09-01 17:27:51,999 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:27:52,012 - INFO - __main__ - ➡️ GET /static/RidaBayi.png
+2025-09-01 17:27:52,019 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:27:52] "[36mGET /static/RidaBayi.png HTTP/1.1[0m" 304 -
+2025-09-01 17:27:52,019 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:27:52] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:30:24,342 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:30:24,407 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:24] "GET / HTTP/1.1" 200 -
+2025-09-01 17:30:24,450 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:30:24,452 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:30:24,455 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:30:24,456 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:24] "GET /static/RidaBayi.jpg HTTP/1.1" 200 -
+2025-09-01 17:30:52,061 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:30:52,062 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:52] "GET / HTTP/1.1" 200 -
+2025-09-01 17:30:52,083 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:30:52,088 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:30:52,089 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:52] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:30:52,094 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:52] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:30:58,807 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:30:58,812 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:58] "GET / HTTP/1.1" 200 -
+2025-09-01 17:30:58,870 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:30:58,873 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:30:58,875 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:58] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:30:58,877 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:30:58] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:31:04,585 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:31:04,587 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:04] "GET / HTTP/1.1" 200 -
+2025-09-01 17:31:04,636 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:31:04,640 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:31:04,643 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:04] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:31:04,646 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:04] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:31:18,923 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:31:18,926 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:18] "GET / HTTP/1.1" 200 -
+2025-09-01 17:31:18,974 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:31:18,976 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:31:18,978 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:18] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:31:18,982 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:18] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:31:27,753 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:31:27,756 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:27] "GET / HTTP/1.1" 200 -
+2025-09-01 17:31:27,809 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:31:27,810 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:31:27,812 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:27] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:31:27,814 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:31:27] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:32:14,888 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:32:14,890 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:32:14] "GET / HTTP/1.1" 200 -
+2025-09-01 17:32:14,942 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:32:14,947 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:32:14,949 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:32:14] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:32:14,951 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:32:14] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:32:44,432 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:32:44,433 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:32:44] "GET / HTTP/1.1" 200 -
+2025-09-01 17:32:44,472 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:32:44,474 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:32:44,476 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:32:44] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:32:44,477 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:32:44] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:33:19,439 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:33:19,442 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:19] "GET / HTTP/1.1" 200 -
+2025-09-01 17:33:19,488 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:33:19,489 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:33:19,492 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:19] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:33:19,492 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:19] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:33:29,895 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:33:29,896 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:29] "GET / HTTP/1.1" 200 -
+2025-09-01 17:33:29,935 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:33:29,939 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:29] "GET /static/style.css HTTP/1.1" 200 -
+2025-09-01 17:33:29,956 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:33:29,970 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:29] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
