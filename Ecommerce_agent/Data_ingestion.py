@@ -1,8 +1,8 @@
 from langchain_astradb import AstraDBVectorStore
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 
-from chatbot.config import Config
-from chatbot.Data_converter import DataConverter
+from Ecommerce_agent.config import Config
+from Ecommerce_agent.Data_converter import DataConverter
 
 
 class DataIngestor:

@@ -1,9 +1,11 @@
+import os
+
 from dotenv import load_dotenv
 from flask import Flask, Response, render_template, request
 from prometheus_client import Counter, generate_latest
 
-from chatbot.Data_ingestion import DataIngestor
-from chatbot.rag_chain import RAGChainBuilder
+from Ecommerce_agent.Data_ingestion import DataIngestor
+from Ecommerce_agent.rag_chain import RAGChainBuilder
 
 load_dotenv()
 
@@ -40,4 +42,6 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    host = os.getenv("FLASK_HOST", "127.0.0.1")  # safe par défaut
+    port = int(os.getenv("PORT", "5000"))
+    app.run(host=host, port=port, debug=True)
