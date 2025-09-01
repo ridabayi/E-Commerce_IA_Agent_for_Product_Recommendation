@@ -169,28 +169,22 @@ def create_app() -> Flask:
 
     @app.after_request
     def set_security_headers(resp: Response) -> Response:
-        # Defaults safe (CSP adaptée à tes CDNs + aux images distantes nécessaires)
         resp.headers["X-Content-Type-Options"] = "nosniff"
         resp.headers["X-Frame-Options"] = "DENY"
-        # 'strict-origin-when-cross-origin' évite de casser Drive/pravatar inutilement
-        resp.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+        # ✅ remettre la valeur attendue par les tests
+        resp.headers["Referrer-Policy"] = "no-referrer"
         resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
-            # images: self + data + tes sources externes (Flaticon + Pravatar + Drive)
             "img-src 'self' data: https://cdn-icons-png.flaticon.com https://i.pravatar.cc "
             "https://drive.google.com https://lh3.googleusercontent.com; "
-            # styles: self + inline (pour tes <style>) + CDNs utilisés par index.html
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com "
             "https://cdn.jsdelivr.net "
             "https://cdnjs.cloudflare.com; "
-            # fonts: Google Fonts
             "font-src 'self' https://fonts.gstatic.com; "
-            # scripts: self + inline + CDNs (Bootstrap bundle, marked, DOMPurify)
             "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net "
             "https://cdnjs.cloudflare.com"
         )
-
         return resp
 
     @app.get("/metrics")
