@@ -12,10 +12,11 @@ flask
 prometheus_client
 hvac
 markdown
-
 ruff
 black
 mypy
 pre-commit
 types-requests
 types-PyYAML
+pytest-cov
+flask-cors

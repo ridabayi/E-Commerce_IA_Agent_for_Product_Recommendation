@@ -6,7 +6,12 @@ from dataclasses import dataclass
 from typing import Any, cast
 
 from flask import Flask, Response, jsonify, render_template, request
+from flask_cors import CORS
 from prometheus_client import Counter, generate_latest
+
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 # --- Prometheus (facultatif pour les tests) ---
 REQUEST_COUNT = Counter("http_requests_total", "Total HTTP Requests")
@@ -55,6 +60,8 @@ def create_app() -> Flask:
     """
     app = Flask(__name__, template_folder="templates", static_folder="static")
 
+    CORS(app, resources={r"/ask": {"origins": ["https://ton-domaine.fr"]}})
+
     testing_mode = os.getenv("APP_TESTING") == "1"
 
     # État RAG (typé pour mypy)
@@ -64,12 +71,16 @@ def create_app() -> Flask:
             vector_store = DataIngestor().ingest(load_existing=True)
             state.chain = RAGChainBuilder(vector_store).build_chain()
             state.ready = True
-            print("[RAG] Initialized")
-        except Exception as e:  # pragma: no cover
+            logger.exception("RAG init error")
+        except Exception:  # pragma: no cover
             state.chain = None
             state.ready = False
-            print("[RAG INIT ERROR]", repr(e))
+            logger.exception("RAG init error")
     app.config["RAG_STATE"] = state
+
+    @app.before_request
+    def log_request_info():
+        logger.info("➡️ %s %s", request.method, request.path)
 
     # ---------- Routes requises par les tests ----------
     @app.get("/health")
@@ -84,10 +95,11 @@ def create_app() -> Flask:
         Doit renvoyer: 200 + JSON {"answer": "..."} ; 400 si question vide.
         """
         data = request.get_json(silent=True) or {}
-        question = str(data.get("question", "")).strip()
-
+        q = data.get("question")
+        question = q.strip() if isinstance(q, str) else ""
         if not question:
             return jsonify(error="question is required"), 400
+        logger.info(f"Received question: {question}")
 
         st = cast(RagState, app.config.get("RAG_STATE", RagState()))
 
