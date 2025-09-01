@@ -865,3 +865,55 @@ NoneType: None
 2025-09-01 17:33:29,939 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:29] "GET /static/style.css HTTP/1.1" 200 -
 2025-09-01 17:33:29,956 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
 2025-09-01 17:33:29,970 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:33:29] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:47:08,854 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 17:47:13,094 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 17:47:15,576 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 17:47:18,070 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 17:47:18,072 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 17:47:19,701 - INFO - __main__ - RAG ready
+2025-09-01 17:47:19,702 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 17:47:19,741 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 17:47:19,742 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-01 17:47:19,744 - INFO - werkzeug -  * Restarting with stat
+2025-09-01 17:47:22,695 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 17:47:23,283 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 17:47:26,021 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 17:47:28,355 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 17:47:28,355 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 17:47:29,939 - INFO - __main__ - RAG ready
+2025-09-01 17:47:29,942 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 17:47:29,953 - WARNING - werkzeug -  * Debugger is active!
+2025-09-01 17:47:29,960 - INFO - werkzeug -  * Debugger PIN: 752-397-832
+2025-09-01 17:47:29,995 - INFO - __main__ - ➡️ GET /
+2025-09-01 17:47:30,004 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:47:30] "GET / HTTP/1.1" 200 -
+2025-09-01 17:47:30,043 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-01 17:47:30,048 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-01 17:47:30,215 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:47:30] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-01 17:47:30,220 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:47:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-01 17:47:37,723 - INFO - __main__ - ➡️ POST /get
+2025-09-01 17:47:37,942 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 17:47:38,410 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-01 17:47:38,411 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-01 17:47:38,898 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 17:47:38,922 - INFO - werkzeug - 127.0.0.1 - - [01/Sep/2025 17:47:38] "POST /get HTTP/1.1" 200 -
+2025-09-01 17:50:21,084 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 17:50:25,214 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 17:50:28,027 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 17:50:30,388 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 17:50:30,389 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 17:50:32,711 - INFO - __main__ - RAG ready
+2025-09-01 17:50:32,713 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 17:50:32,759 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 17:50:32,759 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-01 17:50:32,762 - INFO - werkzeug -  * Restarting with stat
+2025-09-01 17:50:36,433 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-01 17:50:37,247 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-01 17:50:39,698 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-01 17:50:42,045 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-01 17:50:42,046 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-01 17:50:43,621 - INFO - __main__ - RAG ready
+2025-09-01 17:50:43,623 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-01 17:50:43,637 - WARNING - werkzeug -  * Debugger is active!
+2025-09-01 17:50:43,643 - INFO - werkzeug -  * Debugger PIN: 752-397-832

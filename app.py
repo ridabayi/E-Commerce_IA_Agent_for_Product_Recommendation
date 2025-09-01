@@ -60,7 +60,14 @@ def create_app() -> Flask:
     """
     app = Flask(__name__, template_folder="templates", static_folder="static")
 
-    CORS(app, resources={r"/ask": {"origins": ["https://ton-domaine.fr"]}})
+    # CORS: /ask (tests) et /get (UI) — ajuste l'origine prod si besoin
+    CORS(
+        app,
+        resources={
+            r"/ask": {"origins": ["https://ton-domaine.fr"]},
+            r"/get": {"origins": ["https://ton-domaine.fr"]},
+        },
+    )
 
     testing_mode = os.getenv("APP_TESTING") == "1"
 
@@ -71,7 +78,7 @@ def create_app() -> Flask:
             vector_store = DataIngestor().ingest(load_existing=True)
             state.chain = RAGChainBuilder(vector_store).build_chain()
             state.ready = True
-            logger.exception("RAG init error")
+            logger.info("RAG ready")  # <-- FIX: pas logger.exception ici
         except Exception:  # pragma: no cover
             state.chain = None
             state.ready = False
@@ -94,6 +101,7 @@ def create_app() -> Flask:
         Tests envoient: JSON {"question": "..."}
         Doit renvoyer: 200 + JSON {"answer": "..."} ; 400 si question vide.
         """
+        REQUEST_COUNT.inc()
         data = request.get_json(silent=True) or {}
         q = data.get("question")
         question = q.strip() if isinstance(q, str) else ""
@@ -133,6 +141,8 @@ def create_app() -> Flask:
         """
         Ton front envoie form-data { msg, session_id } et attend du texte.
         """
+        REQUEST_COUNT.inc()
+
         user_input = (request.form.get("msg") or "").strip()
         session_id = request.form.get("session_id", "user-session")
 
@@ -159,25 +169,33 @@ def create_app() -> Flask:
 
     @app.after_request
     def set_security_headers(resp: Response) -> Response:
-        # Minimal, safe defaults (tune CSP to match your CDNs used by index.html)
+        # Defaults safe (CSP adaptée à tes CDNs + aux images distantes nécessaires)
         resp.headers["X-Content-Type-Options"] = "nosniff"
         resp.headers["X-Frame-Options"] = "DENY"
-        resp.headers["Referrer-Policy"] = "no-referrer"
+        # 'strict-origin-when-cross-origin' évite de casser Drive/pravatar inutilement
+        resp.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
         resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
-            "img-src 'self' data: https://cdn-icons-png.flaticon.com; "
-            "style-src 'self' 'unsafe-inline' "
-            "https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; "
+            # images: self + data + tes sources externes (Flaticon + Pravatar + Drive)
+            "img-src 'self' data: https://cdn-icons-png.flaticon.com https://i.pravatar.cc "
+            "https://drive.google.com https://lh3.googleusercontent.com; "
+            # styles: self + inline (pour tes <style>) + CDNs utilisés par index.html
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com "
+            "https://cdn.jsdelivr.net "
+            "https://cdnjs.cloudflare.com; "
+            # fonts: Google Fonts
             "font-src 'self' https://fonts.gstatic.com; "
-            "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com"
+            # scripts: self + inline + CDNs (Bootstrap bundle, marked, DOMPurify)
+            "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net "
+            "https://cdnjs.cloudflare.com"
         )
 
         return resp
 
     @app.get("/metrics")
     def metrics() -> Response:
-        return Response(generate_latest(), mimetype="text/plain")
+        return Response(generate_latest(), mimetype="text/plain; version=0.0.4")
 
     return app
 
