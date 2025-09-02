@@ -171,6 +171,7 @@ def create_app() -> Flask:
     def set_security_headers(resp: Response) -> Response:
         resp.headers["X-Content-Type-Options"] = "nosniff"
         resp.headers["X-Frame-Options"] = "DENY"
+        # remettre la valeur attendue par les tests
         resp.headers["Referrer-Policy"] = "no-referrer"
         resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
         resp.headers["Content-Security-Policy"] = (
