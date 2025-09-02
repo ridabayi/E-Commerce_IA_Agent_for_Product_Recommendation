@@ -1,0 +1,43 @@
+2025-09-02 12:23:37,472 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-02 12:23:42,248 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-02 12:23:47,936 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-02 12:23:50,503 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-02 12:23:50,505 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-02 12:23:53,946 - INFO - __main__ - RAG ready
+2025-09-02 12:23:53,954 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-02 12:23:54,093 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-02 12:23:54,093 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-02 12:23:54,098 - INFO - werkzeug -  * Restarting with stat
+2025-09-02 12:24:05,465 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-02 12:24:06,423 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-02 12:24:09,776 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-02 12:24:12,216 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-02 12:24:12,218 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-02 12:24:14,827 - INFO - __main__ - RAG ready
+2025-09-02 12:24:14,833 - INFO - __main__ - Starting server on http://127.0.0.1:5000
+2025-09-02 12:24:14,909 - WARNING - werkzeug -  * Debugger is active!
+2025-09-02 12:24:14,961 - INFO - werkzeug -  * Debugger PIN: 752-397-832
+2025-09-02 12:24:15,133 - INFO - __main__ - ➡️ GET /
+2025-09-02 12:24:15,162 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:15] "GET / HTTP/1.1" 200 -
+2025-09-02 12:24:15,300 - INFO - __main__ - ➡️ GET /static/style.css
+2025-09-02 12:24:15,303 - INFO - __main__ - ➡️ GET /static/RidaBayi.jpg
+2025-09-02 12:24:15,649 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:15] "[36mGET /static/RidaBayi.jpg HTTP/1.1[0m" 304 -
+2025-09-02 12:24:15,677 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-09-02 12:24:16,076 - INFO - __main__ - ➡️ GET /favicon.ico
+2025-09-02 12:24:16,079 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-02 12:24:20,516 - INFO - __main__ - ➡️ POST /get
+2025-09-02 12:24:21,072 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-02 12:24:21,691 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-02 12:24:21,693 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-02 12:24:23,660 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-02 12:24:23,723 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:23] "POST /get HTTP/1.1" 200 -
+2025-09-02 12:24:39,860 - INFO - __main__ - ➡️ POST /get
+2025-09-02 12:24:40,245 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-02 12:24:40,529 - INFO - astrapy.data.cursors.cursor - cursor fetching a page: (empty page state) from amazon_product_reviews
+2025-09-02 12:24:41,070 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/amazon_product_reviews "HTTP/1.1 200 OK"
+2025-09-02 12:24:41,071 - INFO - astrapy.data.cursors.cursor - cursor finished fetching a page: (empty page state) from amazon_product_reviews
+2025-09-02 12:24:41,473 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-02 12:24:41,477 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:41] "POST /get HTTP/1.1" 200 -
+2025-09-02 12:26:14,884 - INFO - werkzeug -  * Detected change in 'c:\\users\\bayir\\documents\\genia-project\\e-commerce_product-recommender\\app.py', reloading
+2025-09-02 12:26:17,030 - INFO - werkzeug -  * Restarting with stat
