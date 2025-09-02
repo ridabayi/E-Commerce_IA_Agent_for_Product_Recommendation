@@ -171,7 +171,6 @@ def create_app() -> Flask:
     def set_security_headers(resp: Response) -> Response:
         resp.headers["X-Content-Type-Options"] = "nosniff"
         resp.headers["X-Frame-Options"] = "DENY"
-        # remettre la valeur attendue par les tests
         resp.headers["Referrer-Policy"] = "no-referrer"
         resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
         resp.headers["Content-Security-Policy"] = (
@@ -194,9 +193,6 @@ def create_app() -> Flask:
     return app
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     app = create_app()
-    host = os.getenv("FLASK_HOST", "127.0.0.1")
-    port = int(os.getenv("PORT", "5000"))
-    logger.info("Starting server on http://%s:%s", host, port)
-    app.run(host=host, port=port, debug=True)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", "5000")), debug=True)
