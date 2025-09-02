@@ -41,3 +41,15 @@
 2025-09-02 12:24:41,477 - INFO - werkzeug - 127.0.0.1 - - [02/Sep/2025 12:24:41] "POST /get HTTP/1.1" 200 -
 2025-09-02 12:26:14,884 - INFO - werkzeug -  * Detected change in 'c:\\users\\bayir\\documents\\genia-project\\e-commerce_product-recommender\\app.py', reloading
 2025-09-02 12:26:17,030 - INFO - werkzeug -  * Restarting with stat
+2025-09-02 15:40:41,921 - INFO - langchain_astradb.vectorstores - vector store default init, collection 'amazon_product_reviews'
+2025-09-02 15:40:42,582 - INFO - root - Detecting API environment 'prod' from supplied endpoint
+2025-09-02 15:40:45,217 - INFO - astrapy.data.database - createCollection('amazon_product_reviews')
+2025-09-02 15:40:47,804 - INFO - httpx - HTTP Request: POST https://374c2986-d63f-41bc-b535-7f2fc5698478-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-09-02 15:40:47,805 - INFO - astrapy.data.database - finished createCollection('amazon_product_reviews')
+2025-09-02 15:40:49,482 - INFO - __main__ - RAG ready
+2025-09-02 15:40:49,533 - INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.81:5000
+2025-09-02 15:40:49,535 - INFO - werkzeug - [33mPress CTRL+C to quit[0m
+2025-09-02 15:40:49,542 - INFO - werkzeug -  * Restarting with stat
