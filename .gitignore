@@ -1,3 +1,5 @@
+logs/
+static/images/votre-photo.jpg
 .env
 *.pem
 *.key
@@ -13,5 +15,3 @@ E_commerce_LLMOPS_Agent.egg-info/
 .vscode/
 build/
 dist/
-
-static\RidaBayi.jpg
