@@ -6,7 +6,7 @@ It leverages **Large Language Models (LLMs)**, **vector databases**, and **cloud
 
 The system is architected with modern **MLOps practices** to ensure scalability, maintainability, and observability in production environments.
 
-[📽️ Download Demo Video]([https://github.com/USERNAME/REPO/releases/download/v1.0.0/demo.mp4](https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/Enregistrement%20de%20l%C3%A9cran%202025-09-03%20133926.mp4))
+[📽️ Download Demo Video](https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/Démo.mp4)
 
 ---
 
