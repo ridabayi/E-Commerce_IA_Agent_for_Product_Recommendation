@@ -5,8 +5,8 @@ This project is an advanced **AI-powered recommendation system** designed for e-
 It leverages **Large Language Models (LLMs)**, **vector databases**, and **cloud-native deployment** to deliver highly accurate and contextual product recommendations.
 
 The system is architected with modern **MLOps practices** to ensure scalability, maintainability, and observability in production environments.
-
-![Demo Preview](https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/Enregistrement-de-l_%C3%A9cran-2025-09-03-133926.gif)
+<img src="https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/output2.gif" width="600" alt="MLOps Architecture">
+<img src="https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/Enregistrement-de-l_%C3%A9cran-2025-09-03-133926.gif" width="600" alt="Demo Preview">
 
 ---
 
