@@ -8,7 +8,7 @@ The system is architected with modern **MLOps practices** to ensure scalability,
 
 <img src="https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/LLMOps_Architecture.gif" width="600" alt="MLOps Architecture">
 
-<img src="https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/Enregistrement-de-l_%C3%A9cran-2025-09-03-133926.gif" width="600" alt="Demo Preview">
+<img src="https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/Demo.gif" width="600" alt="Demo Preview">
 
 <img src="https://github.com/ridabayi/E-Commerce_IA_Agent_for_Product_Recommendation/blob/main/grafana.gif" width="600" alt="Monitoring and observability">
 ---
